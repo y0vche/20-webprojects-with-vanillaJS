@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+ 
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;  
+  background-color: #15b3f1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 20px 0 0;
+}
+
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
+.wrong-letters-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.wrong-letters-container p {
+  margin: 0 0 5px;
+}
+
+.wrong-letters-container span {
+  font-size: 24px;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: -20px;  
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.letter {
+  border-bottom: 3px solid #f115ba;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #15f132;
+  margin: 0 3px;
+  height: 50px;
+  width: 30px;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 50px;
+  right: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background-color: rgba(21, 241, 50, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #074c7a;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  border:0;
+  border-radius: 10px;
+}
+
+.popup button:active {
+  transform: scale(0.99);
+}
+
+.popup button {
+  outline: 0;
+}
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: -65px; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.notification-container p {
+  margin-top: 0;
+}
+
+.notification-container.show {
+  transform: translateY(-65px);
+}
